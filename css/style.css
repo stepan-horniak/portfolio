@@ -1,0 +1,294 @@
+[class*=__container] {
+  max-width: 79.375rem;
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #3f3d3d;
+  color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@font-face {
+  font-family: "fonts";
+  src: url("../fonts/fonts.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=_icon-]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "fonts" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-Vector:before {
+  content: "\e900";
+}
+
+._icon-sass:before {
+  content: "\e901";
+}
+
+._icon-js:before {
+  content: "\e902";
+}
+
+._icon-html:before {
+  content: "\e903";
+}
+
+._icon-viber:before {
+  content: "\e904";
+}
+
+._icon-telegram1:before {
+  content: "\e905";
+}
+
+._icon-git:before {
+  content: "\e907";
+}
+
+._icon-telegram:before {
+  content: "\ea95";
+}
+
+._icon-steam2:before {
+  content: "\eaad";
+}
+
+._icon-github:before {
+  content: "\eab0";
+}
+
+._icon-html-five:before {
+  content: "\eae4";
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/SpaceMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/SpaceMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/SpaceMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+}
+.header__logo {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.nav-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+.nav-header__link {
+  font-size: 1.25rem;
+  padding: 0.3125rem 0.625rem;
+  margin: -0.3125rem -0.625rem;
+}
+
+.hero__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+.hero__image {
+  max-width: 31.25rem;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+.hero__image > img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info-hero {
+  padding: 2.5rem 0;
+  margin-right: -3.125rem;
+}
+.info-hero__title {
+  font-size: 2.125rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1.875rem;
+}
+.info-hero__title > span {
+  position: relative;
+  overflow: hidden;
+}
+.info-hero__title > span::before {
+  content: "";
+  width: 100%;
+  height: 0.1875rem;
+  background-color: #508d26;
+  position: absolute;
+  border-radius: 1.25rem;
+  bottom: -0.125rem;
+  left: 0;
+}
+.info-hero__text {
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 28.125rem;
+  padding-right: 3.125rem;
+}
+.info-hero__button-contact {
+  position: relative;
+  font-weight: 700;
+}
+.info-hero__button-contact::before {
+  content: "";
+  width: 0;
+  height: 0.1875rem;
+  background-color: #508d26;
+  position: absolute;
+  border-radius: 1.25rem;
+  bottom: -0.3125rem;
+  left: 0;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .info-hero__button-contact:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .info-hero__button-contact:hover::before {
+    width: 100%;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+}

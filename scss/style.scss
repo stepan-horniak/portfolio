@@ -1,0 +1,33 @@
+@use "sass:math";
+
+//==============function============
+@function toRem($px, $rem: 16) {
+  @return math.div($px, $rem) * 1rem;
+}
+@function toEm($px, $em: 16) {
+  @return math.div($px, $em) * 1em;
+}
+//===============================
+[class*="__container"] {
+  max-width: toRem(1270);
+  margin: 0 auto;
+  padding-left: toRem(15);
+  padding-right: toRem(15);
+}
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #3f3d3d;
+  color: #ffffff;
+}
+$hover-color: rgba(255, 255, 255, 0.5);
+$light-color: rgba(255, 255, 255, 0.6);
+
+//=================================
+@import "reset";
+@import "icon-font";
+@import "font";
+
+@import "header";
+@import "page";
