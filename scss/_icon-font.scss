@@ -22,8 +22,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-Vector:before {
+._icon-linkedin:before {
   content: "\e900";
+}
+._icon-figma:before {
+  content: "\e908";
 }
 ._icon-sass:before {
   content: "\e901";
@@ -37,21 +40,12 @@
 ._icon-viber:before {
   content: "\e904";
 }
-._icon-telegram1:before {
+._icon-telegram:before {
   content: "\e905";
+}
+._icon-github:before {
+  content: "\e906";
 }
 ._icon-git:before {
   content: "\e907";
-}
-._icon-telegram:before {
-  content: "\ea95";
-}
-._icon-steam2:before {
-  content: "\eaad";
-}
-._icon-github:before {
-  content: "\eab0";
-}
-._icon-html-five:before {
-  content: "\eae4";
 }

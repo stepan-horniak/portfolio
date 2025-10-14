@@ -25,9 +25,51 @@ $hover-color: rgba(255, 255, 255, 0.5);
 $light-color: rgba(255, 255, 255, 0.6);
 
 //=================================
+.button {
+  position: relative;
+  font-weight: 700;
+  font-size: toRem(22);
+
+  @media (max-width: toEm(767.98)) {
+    font-size: toRem(18);
+  }
+  &::before {
+    content: "";
+    width: 0;
+    height: toRem(3);
+    background-color: #508d26;
+    position: absolute;
+    border-radius: toRem(20);
+    bottom: toRem(-5);
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    @media (max-width: toEm(767.98)) {
+      height: toRem(2);
+    }
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      color: $hover-color;
+      &::before {
+        width: 100%;
+        transition: width 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.title {
+  font-size: toRem(42);
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+  @media (max-width: toEm(767.98)) {
+    font-size: toRem(32);
+  }
+}
+//==============================
 @import "reset";
 @import "icon-font";
 @import "font";
 
-@import "header";
 @import "page";
