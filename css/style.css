@@ -259,7 +259,7 @@ textarea {
   gap: 1.25rem;
 }
 .nav-header__link {
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   padding: 0.3125rem 0.625rem;
   margin: -0.3125rem -0.625rem;
 }
@@ -457,6 +457,9 @@ textarea {
   color: #181717;
 }
 
+.progects {
+  padding-bottom: 3.75rem;
+}
 .progects__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,12 +480,13 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 .block-progects {
-  -ms-flex-preferred-size: 25rem;
-      flex-basis: 25rem;
   background-color: #fff;
   border-radius: 1.25rem;
   overflow: hidden;
@@ -501,10 +505,16 @@ textarea {
   width: 24.6875rem;
   height: 15.625rem;
 }
+@media (max-width: 26.5em) {
+  .block-progects__images {
+    width: 18.125rem;
+    height: 12.5rem;
+  }
+}
 .block-progects__images > img {
   position: absolute;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .block-progects__images > img:nth-child(1) {
   bottom: 0;

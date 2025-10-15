@@ -54,7 +54,7 @@
   // .nav-header__link
 
   &__link {
-    font-size: toRem(20);
+    font-size: toRem(30);
     padding: toRem(5) toRem(10);
     margin: toRem(-5) toRem(-10);
   }
@@ -220,6 +220,7 @@
   &__block {
     display: flex;
     align-items: center;
+
     gap: toRem(15);
     font-size: toRem(42);
     @media (max-width: toEm(767.98)) {
@@ -265,6 +266,7 @@
 }
 //==============================
 .progects {
+  padding-bottom: toRem(60);
   // .progects__container
 
   &__container {
@@ -284,6 +286,8 @@
   &__row {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    gap: toRem(20);
     flex-wrap: wrap;
   }
 
@@ -293,7 +297,7 @@
   }
 }
 .block-progects {
-  flex-basis: toRem(400);
+  // flex: 1 1 toRem(400);
   background-color: #fff;
   border-radius: toRem(20);
   overflow: hidden;
@@ -304,7 +308,6 @@
     font-size: toRem(20);
     font-style: italic;
     color: #000;
-    // z-index: 4;
     font-weight: 700;
     padding: toRem(15);
     position: relative;
@@ -316,9 +319,15 @@
     position: relative;
     width: toRem(395);
     height: toRem(250);
+
+    @media (max-width: toEm(424)) {
+      width: toRem(290);
+      height: toRem(200);
+    }
     & > img {
       position: absolute;
-      object-fit: contain;
+      object-fit: cover;
+
       &:nth-child(1) {
         bottom: 0;
         left: 0;
