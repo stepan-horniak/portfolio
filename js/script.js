@@ -23,11 +23,6 @@ function windowLoaded() {
 
   //=================header background color =========
 
-  // window.addEventListener("scroll", (e) => {
-  //   const headerWrapper = document.querySelector(".header__wrapper")
-  //   headerWrapper.style.backgroundColor = "#3f3d3d"
-  //   console.log(e.target)
-  // })
   function handleScroll(e) {
     const headerWrapper = document.querySelector(".header__wrapper")
     headerWrapper.style.backgroundColor = "#3f3d3d"
