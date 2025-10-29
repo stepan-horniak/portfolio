@@ -227,8 +227,12 @@ textarea {
 .header__wrapper {
   position: fixed;
   z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  height: auto;
+  height: 4rem;
+  overflow: hidden;
 }
 .header__row {
   display: -webkit-box;
@@ -397,6 +401,7 @@ textarea {
   -webkit-column-gap: 0.9375rem;
      -moz-column-gap: 0.9375rem;
           column-gap: 0.9375rem;
+  position: relative;
 }
 @media (max-width: 47.99875em) {
   .skills__row {
@@ -437,6 +442,16 @@ textarea {
   .skills__block:before {
     font-size: 2.25rem;
   }
+}
+.skills__block > span {
+  content: "";
+  background-color: red;
+}
+.skills__block > span::before {
+  content: "";
+}
+.skills__block > span::after {
+  content: "";
 }
 .skills__block:nth-child(1):before {
   color: #e34f26;
