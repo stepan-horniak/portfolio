@@ -164,36 +164,12 @@ textarea {
   content: "\e900";
 }
 
-._icon-figma:before {
-  content: "\e908";
-}
-
-._icon-sass:before {
-  content: "\e901";
-}
-
-._icon-js:before {
-  content: "\e902";
-}
-
-._icon-html:before {
-  content: "\e903";
-}
-
 ._icon-viber:before {
   content: "\e904";
 }
 
 ._icon-telegram:before {
   content: "\e905";
-}
-
-._icon-github:before {
-  content: "\e906";
-}
-
-._icon-git:before {
-  content: "\e907";
 }
 
 @font-face {
@@ -227,8 +203,12 @@ textarea {
 .header__wrapper {
   position: fixed;
   z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  height: auto;
+  height: 4rem;
+  overflow: hidden;
 }
 .header__row {
   display: -webkit-box;
@@ -259,7 +239,7 @@ textarea {
   gap: 1.25rem;
 }
 .nav-header__link {
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   padding: 0.3125rem 0.625rem;
   margin: -0.3125rem -0.625rem;
 }
@@ -383,6 +363,25 @@ textarea {
     font-size: 1rem;
   }
 }
+.info-hero__button-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.info-hero__button-contact > span:nth-child(1)::before {
+  color: #7360f2;
+}
+.info-hero__button-contact > span:nth-child(2)::before {
+  color: #0088cc;
+}
+
 .skills__container {
   margin-bottom: 3.75rem;
 }
@@ -390,9 +389,11 @@ textarea {
   margin-bottom: 3.75rem;
 }
 .skills__row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   row-gap: 3.125rem;
   -webkit-column-gap: 0.9375rem;
      -moz-column-gap: 0.9375rem;
@@ -401,6 +402,9 @@ textarea {
 @media (max-width: 47.99875em) {
   .skills__row {
     row-gap: 1.875rem;
+    -webkit-column-gap: 0.9375rem;
+       -moz-column-gap: 0.9375rem;
+            column-gap: 0.9375rem;
   }
 }
 @media (max-width: 31.25em) {
@@ -422,41 +426,31 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.9375rem;
-  font-size: 2.625rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 0rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 18.75rem;
+          flex: 1 1 18.75rem;
 }
-@media (max-width: 47.99875em) {
-  .skills__block {
-    font-size: 1.5rem;
-  }
+.skills__block-image {
+  aspect-ratio: 60/30;
+  max-width: 10.625rem;
 }
-.skills__block:before {
-  font-size: 3.75rem;
+.skills__block-image > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-@media (max-width: 47.99875em) {
-  .skills__block:before {
-    font-size: 2.25rem;
-  }
-}
-.skills__block:nth-child(1):before {
-  color: #e34f26;
-}
-.skills__block:nth-child(2):before {
-  color: #cc6699;
-}
-.skills__block:nth-child(3):before {
-  color: #f7df1e;
-}
-.skills__block:nth-child(4):before {
-  color: #f05033;
-}
-.skills__block:nth-child(5):before {
-  color: #f24e1e;
-}
-.skills__block:nth-child(6):before {
-  color: #181717;
+.skills__block-text {
+  font-size: 1.5625rem;
 }
 
+.progects {
+  padding-bottom: 3.75rem;
+}
 .progects__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,12 +471,13 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 .block-progects {
-  -ms-flex-preferred-size: 25rem;
-      flex-basis: 25rem;
   background-color: #fff;
   border-radius: 1.25rem;
   overflow: hidden;
@@ -501,10 +496,16 @@ textarea {
   width: 24.6875rem;
   height: 15.625rem;
 }
+@media (max-width: 26.5em) {
+  .block-progects__images {
+    width: 18.125rem;
+    height: 12.5rem;
+  }
+}
 .block-progects__images > img {
   position: absolute;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .block-progects__images > img:nth-child(1) {
   bottom: 0;
