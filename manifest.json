@@ -1,10 +1,12 @@
 {
-  "name": "portfolio",
-  "short_name": "portfolioName",
+  "name": "Portfolio",
+  "short_name": "Portfolio",
   "start_url": "/",
+  "id": "123456",
   "display": "standalone",
   "background_color": "#3f3d3d",
   "theme_color": "#ffffff",
+  "display_override": ["standalone", "minimal-ui"],
   "icons": [
     {
       "src": "/user-192.png",
@@ -15,6 +17,20 @@
       "src": "/user-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "/mobile-img.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    },
+    {
+      "src": "/desctop-img.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
     }
   ]
 }
