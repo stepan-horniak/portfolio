@@ -346,3 +346,18 @@
     }
   }
 }
+
+.wrpper-button-add-pwa {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  & > button {
+    background-color: #508d26;
+    color: #fff;
+    border: none;
+    padding: toRem(10) toRem(20);
+    font-size: toRem(16);
+    border-radius: toRem(5);
+    cursor: pointer;
+  }
+}
