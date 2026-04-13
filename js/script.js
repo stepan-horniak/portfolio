@@ -53,13 +53,20 @@ function windowLoaded() {
   const installBtn = document.getElementById("installBtn")
 
   window.addEventListener("beforeinstallprompt", (e) => {
+    console.log("🔥 PWA READY")
     e.preventDefault()
     deferredPrompt = e
-
-    // показуємо кнопку
-    installBtn.style.display = "block"
   })
+  installBtn.addEventListener("click", async () => {
+    console.log("CLICK", deferredPrompt)
 
+    if (!deferredPrompt) {
+      alert("PWA не готовий до встановлення")
+      return
+    }
+
+    deferredPrompt.prompt()
+  })
   installBtn.addEventListener("click", async () => {
     if (!deferredPrompt) return
 
