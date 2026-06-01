@@ -34,17 +34,17 @@ function windowLoaded() {
 
   //====================
 
-  // const TELEGRAM_TOKEN = "8473647684:AAHBh_JE0fYrfH_-8K0rn9VQErluwnwkroY"
-  // const CHAT_ID = "1134377929,"
+   const TELEGRAM_TOKEN = "8473647684:AAHBh_JE0fYrfH_-8K0rn9VQErluwnwkroY"
+   const CHAT_ID = "1134377929,"
 
-  // fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify({
-  //     chat_id: CHAT_ID,
-  //     text: `Хтось відкрив сайт ${new Date().toLocaleString()}`,
-  //   }),
-  // })
+   fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+     method: "POST",
+     headers: { "Content-Type": "application/json" },
+     body: JSON.stringify({
+       chat_id: CHAT_ID,
+       text: `Хтось відкрив сайт ${new Date().toLocaleString()}`,
+     }),
+   })
   //===========================================================
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/sw.js")
