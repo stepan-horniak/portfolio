@@ -42,7 +42,7 @@ function windowLoaded() {
      headers: { "Content-Type": "application/json" },
      body: JSON.stringify({
        chat_id: CHAT_ID,
-       text: `Хтось відкрив сайт ${new Date().toLocaleString()}`,
+       text: `Хтось відкрив сайт тест ${new Date().toLocaleString()}`,
      }),
    })
   //===========================================================
